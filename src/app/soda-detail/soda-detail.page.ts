@@ -27,7 +27,7 @@ export class SodaDetailPage implements OnInit {
   }
   share(){
     this.sodaDetail.subscribe((soda)=>{
-      this._socialSharing.share("LOOK What I found!", soda.name, "", soda.image);
+      this._socialSharing.share("LOOK What I found!", soda.name, "", soda.image); 
     });
   }
 
