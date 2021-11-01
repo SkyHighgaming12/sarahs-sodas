@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Soda Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="(sodaDetail | async)?.image" item-start></ion-img>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        {{(sodaDetail | async)?.name}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{(sodaDetail | async)?.name}}
+      {{(sodaDetail | async)?.description}}
+    </ion-card-content>
+  </ion-card>
+  Caffeine:
+  <ion-chip outline color="primary">
+    <ion-icon name="star"></ion-icon>
+    <ion-label>{{(sodaDetail | async)?.caffeine}}</ion-label>
+  </ion-chip><br>
+  Calories:
+  <ion-chip outline color="primary">
+    <ion-icon name="options"></ion-icon>
+    <ion-label>{{(sodaDetail | async)?.calories}}</ion-label>
+  </ion-chip><br>
+  Size:
+  <ion-chip outline color="primary">
+    <ion-icon name="beer"></ion-icon>
+    <ion-label>{{(sodaDetail | async)?.size}}</ion-label>
+  </ion-chip>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="share()">
+        <ion-icon color="dark" name="share"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+  </ion-fab>
+</ion-content>

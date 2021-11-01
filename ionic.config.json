@@ -1,5 +1,7 @@
 {
   "name": "sarahs-soda",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

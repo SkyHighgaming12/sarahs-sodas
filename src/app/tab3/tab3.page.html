@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Contact
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,18 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">My Sodas</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-avatar (click)="selectImageSource()" class="profile-pic">
+    <ion-img src="https://static-cdn.jtvnw.net/jtv_user_pictures/fe32f39c-6334-4e05-813e-56d65756bf89-profile_image-300x300.png"></ion-img>
+  </ion-avatar>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>SkyHighGaming</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Gamer
+    </ion-card-content>
+  </ion-card>
 </ion-content>

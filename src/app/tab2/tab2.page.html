@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Soda List
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,22 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card [routerLink]="['soda-detail', soda.id]" button *ngFor='let soda of (sodaList | async)'>
+    
+    
+    
+    <ion-img [src]='soda.image'></ion-img>
+    <ion-card-header color="danger"> 
+      <ion-card-title>{{soda.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>{{soda.description}}</ion-item>
+    <ion-item>Size: {{soda.size}}</ion-item>
+    <ion-item>caffeine: {{soda.caffeine}}</ion-item>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    
+      
+    
+    
+  </ion-card>
+  
 </ion-content>
